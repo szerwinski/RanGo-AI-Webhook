@@ -1,13 +1,14 @@
 const axios = require('axios');
+require('dotenv').config()
 
 // URL da API do Waapi
 const waapiBaseUrl = 'https://waapi.app/api/v1';
 
 // Substitua pelo seu token de acesso da API do Waapi
-const waapiToken = 'p5LujFfS4oj4FHsYRoXzxGmHS05zEE2e1d5ynmDIbc5220ad';
+const waapiToken = process.env.WAAPITOKEN;
 
 // Substitua pelo seu ID da instância
-const waapiInstanceID = '16051';
+const waapiInstanceID = process.env.WAAPIINSTANCEID;
 
 // Exemplo de função para obter informações básicas da API
 async function getBasicInfo() {

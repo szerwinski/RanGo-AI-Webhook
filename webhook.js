@@ -11,10 +11,10 @@ const waapiBaseUrl = 'https://waapi.app/api/v1';
 const aiBaseUrl = 'https://b02a697b19d9.ngrok.app/api/v1/run/a5934e58-2889-4cdb-8bd0-c9ea9e52347b';
 
 // Substitua pelo seu token de acesso da API do Waapi
-const waapiToken = 'p5LujFfS4oj4FHsYRoXzxGmHS05zEE2e1d5ynmDIbc5220ad';
+const waapiToken = process.env.WAAPITOKEN;
 
 // Substitua pelo seu ID da instância
-const waapiInstanceID = '16051';
+const waapiInstanceID = process.env.WAAPIINSTANCEID;
 
 // Middleware para parsear o corpo das requisições como JSON
 app.use(bodyParser.json());
